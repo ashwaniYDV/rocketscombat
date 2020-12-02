@@ -9,6 +9,7 @@ let canvas = c.canvas;
 
 let form = document.getElementById('form');
 let playerName = document.getElementById('player-name');
+let navTitle = document.getElementById('navbarDropdown');
 
 let rocketImage = c.loadImage('./images/Rockets.png');
 let bulletImage = c.loadImage('./images/bullet.png');
@@ -33,6 +34,7 @@ function init() {
       }
       div.innerHTML += '<a class="dropdown-item">' + data[i] + '</a>';
     }
+    navTitle.innerHTML = `Notifications <span style="color: black; margin: 0; padding: 0;">${ data.length }</span>`;
   });
 
   // CLIENT SIDE GAME LOGIC
